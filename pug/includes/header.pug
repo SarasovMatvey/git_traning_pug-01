@@ -1,17 +1,38 @@
 header.header
     .container
         .header__top
-            .row
-                .col-2
-                    .header__logo
-                        img.header__logo-img(src="img/header/logo.svg", alt="")
+            .header__logo
+                img.header__logo-img(src="img/header/logo.svg", alt="")
+            nav.header__nav
+                a.header__nav-link(href="#") Home
+                a.header__nav-link(href="#") feature
+                a.header__nav-link(href="#") pricing
+                a.header__nav-link(href="#") team
+                a.header__nav-link(href="#") blog
+                a.header__nav-link(href="#") contact
+            a.header__nav-btn(href="#") Get the app
+        .header__main
+            .row.align-items-center
                 .col-6
-                    nav.header__nav
-                        a.header__nav-link(href="#") Home
-                        a.header__nav-link(href="#") feature
-                        a.header__nav-link(href="#") pricing
-                        a.header__nav-link(href="#") team
-                        a.header__nav-link(href="#") blog
-                        a.header__nav-link(href="#") contact
-                .col-2
-                    a.header__nav-btn Get the app
+                    .header__content
+                        h1.header__title
+                            span.header__title-part.header__title-part_bold.header__title-part_colored.header__title-part_big.header__title-part_attachable App
+                            span.header__title-part.header__title-part_colored.header__title-part_big  nest 
+                            span.header__title-part.header__title-part_bold.header__title-part_big Best Mobile 
+                            | App Landing Page
+                        p.header__text.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        .header__markets
+                            a.header__markets-btn
+                                i.header__markets-icon.icon-apple
+                                .header__markets-title-block
+                                    h4.header__markets-subtitle Download from
+                                    h3.header__markets-title Apple Store
+                            a.header__markets-btn.header__markets-btn_transparent
+                                i.header__markets-icon.icon-play_store
+                                .header__markets-title-block
+                                    h4.header__markets-subtitle Download from
+                                    h3.header__markets-title Apple Store
+                .col-6
+                    .header__main-img-wrap
+                        img.header__main-img(src="img/header/iPhoneX1.png", alt="")
