@@ -11,9 +11,23 @@ header.header
                 a.header__nav-link(href="#") blog
                 a.header__nav-link(href="#") contact
             a.header__nav-btn(href="#") Get the app
+            //- hamburger
+            button.header__hamburger.hamburger.hamburger--emphatic(type='button')
+                span.hamburger-box
+                    span.hamburger-inner
+            //- mobile-menu
+            .header__mobile-menu
+                nav.header__nav
+                    a.header__nav-link(href="#") Home
+                    a.header__nav-link(href="#") feature
+                    a.header__nav-link(href="#") pricing
+                    a.header__nav-link(href="#") team
+                    a.header__nav-link(href="#") blog
+                    a.header__nav-link(href="#") contact
+                a.header__nav-btn(href="#") Get the app
         .header__main
-            .row.align-items-center
-                .col-6
+            .header__main-row.row
+                .header__content-col.col-10.col-md-6
                     .header__content
                         h1.header__title
                             span.header__title-part.header__title-part_bold.header__title-part_colored.header__title-part_big.header__title-part_attachable App
@@ -33,6 +47,6 @@ header.header
                                 .header__markets-title-block
                                     h4.header__markets-subtitle Download from
                                     h3.header__markets-title Apple Store
-                .col-6
+                .header__main-img-wrap-col.col-9.col-md-6
                     .header__main-img-wrap
                         img.header__main-img(src="img/header/iPhoneX1.png", alt="")

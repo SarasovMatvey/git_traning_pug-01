@@ -4,6 +4,10 @@
     color: #ffffff
     font-family: "poppins", sans-serif
     background: url(../img/header/header_bg.jpg) center / cover no-repeat
+    overflow: hidden
+
+    // header__top
+
     &__top
         +flex($jc: space-between, $ai: center, $dir: null, $wrap: null, $disp: flex)
         margin-bottom: 9.6875rem
@@ -11,6 +15,8 @@
         +img-resp
     &__nav
         +flex($jc: space-between, $ai: center, $dir: null, $wrap: null, $disp: flex)
+        +media(915px)
+            display: none
     &__nav-link
         margin-right: 1.5625rem
         font-size: 1rem
@@ -33,6 +39,25 @@
         border: 1px solid #fff
         border-radius: 1.875rem
         padding: 1.5rem 2.1875rem
+        +media(915px)
+            display: none
+    &__hamburger
+        z-index: 3
+        display: none
+        +media(915px)
+            display: block
+    &__hamburger.is-active
+        position: fixed
+        right: 1.875rem
+        top: 1.875rem
+
+    // header__main
+    &__main-row
+        align-items: center
+        position: relative
+    &__content-col
+        +media(767.9px)
+            z-index: 1
     &__title
         margin-bottom: 1.5625rem
         font-size: 2.25rem
@@ -54,10 +79,11 @@
         letter-spacing: 0rem
         line-height: 1.6
     &__markets-btn
-        +flex($jc: null, $ai: center, $dir: null, $wrap: null, $disp: inline-flex)
+        +flex($jc: center, $ai: center, $dir: null, $wrap: null, $disp: inline-flex)
         margin-right: 1.5625rem
-        padding: 0 1.125rem
+        margin-bottom: 1.5625rem
         height: 3.75rem
+        min-width: 10.625rem
         border-radius: 0.4375rem
         box-shadow: 0px 10px 30px rgba(0,0,0,0.1)
         letter-spacing: 0rem
@@ -66,6 +92,7 @@
     &__markets-btn_transparent
         background: none
         border: 1px solid #fff
+        box-shadow: none
     &__markets-icon
         margin-right: 0.625rem
     &__markets-subtitle
@@ -80,6 +107,37 @@
         font-size: 1.875rem
     .icon-play_store
         font-size: 1.9375rem
+    &__main-img-wrap-col
+        +media(767.9px)
+            position: absolute
+            left: 50%
+            top: 40%
+            transform: translateX(-50%)
+            opacity: 0.5
     &__main-img
         +img-resp
+
+    // mobile-menu
+
+    &__mobile-menu
+        display: none
+        position: fixed
+        z-index: 2
+        background: rgba(#321E39, 95%)
+        left: 100%
+        top: 0
+        height: 100vh
+        width: 100vw
+        transition: .2s
+        +media(915px)
+            +flex($jc: center, $ai: center, $dir: column, $wrap: null, $disp: flex)
+        .header__nav
+            +flex($jc: null, $ai: center, $dir: column, $wrap: null, $disp: flex)
+        .header__nav-link
+            margin-right: 0
+            margin-bottom: 1.25rem
+        .header__nav-btn
+            display: block
+    &__mobile-menu.is-active
+        left: 0
     
