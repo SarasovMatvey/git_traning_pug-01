@@ -16,3 +16,21 @@
         color: #575757
         max-width: 320px
         line-height: 25px
+
+
+@media screen and ( max-width: 671px )
+    .overview
+        &__inner
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+
+@media screen and ( max-width: 688px )
+    .overview
+        &__inner
+            display: flex
+            flex-flow: row wrap
+            justify-content: unsafe
+            align-items: stretch
+    
