@@ -1,4 +1,47 @@
 .achieve
-  background: linear-gradient(rgba($accent_color, .5) 50%, rgba($accent_color, .5) 50%), url(../img/achievement_bg.jpg) 0 0 / cover
+  background: linear-gradient(rgba($accent_color, .8) 50%, rgba($accent_color, .8) 50%), url(../img/achievement_bg.jpg) 0 0 / cover
   max-width: 1920px
   padding: 80px 0
+
+ul.achieve__list
+  display: flex
+  justify-content: space-evenly
+
+  .achieve__item
+    position: relative
+    text-align: center
+    list-style: none
+    padding: 20px
+    width: 166px
+    height: 118px
+    margin-left: rem(15px)
+    border: 1px dashed #fff
+    border-radius: 10px
+    transform: rotate(55deg)
+
+    &_title
+      color: #fff
+      font-family: $font_default
+      margin-bottom: 0
+
+    &_line
+      color: #fff
+      font-family: $font_default
+
+    &::after
+      content: ''
+      position: absolute
+      top: -60%
+      width: 170px
+      height: 1px
+      background-color: white
+      transform: rotate(-55deg)
+
+    &
+
+  .achieve__content
+    transform: rotate(-55deg)
+
+  .achieve__icon
+    font-size: 35px
+    color: #fff
