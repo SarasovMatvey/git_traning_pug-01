@@ -1,3 +1,5 @@
+source/
+
 node_modules/
 
 img/**/thumb.db
@@ -9,3 +11,5 @@ package-lock.json
 
 **/*.html
 *.html
+
+

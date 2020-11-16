@@ -1,0 +1,36 @@
+.overview
+    margin-top: 6.25rem
+    &__inner
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__block
+        text-align: center
+    &__title
+        font-size: 18px
+        color: #414040
+        font-family: $font-default
+    &__desc
+        font-size: 15px
+        font-family: $font-default
+        color: #575757
+        max-width: 320px
+        line-height: 25px
+
+
+@media screen and ( max-width: 671px )
+    .overview
+        &__inner
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+
+@media screen and ( max-width: 688px )
+    .overview
+        &__inner
+            display: flex
+            flex-flow: row wrap
+            justify-content: unsafe
+            align-items: stretch
+    
